@@ -204,6 +204,18 @@ export default function ProjectModal({ project, onClose }) {
                   </a>
                 )}
 
+                {project.links.backend && (
+                  <a
+                    href={project.links.backend}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-between px-4 py-3 border border-[#8C5338] text-[#8C5338] hover:bg-[#8C5338] hover:text-[#F6F4EE] transition-colors text-xs font-mono uppercase tracking-wider"
+                  >
+                    <span>Backend API</span>
+                    <ExternalLinkIcon className="w-3.5 h-3.5" />
+                  </a>
+                )}
+
                 {project.links.certificate && (
                   <a
                     href={project.links.certificate}
@@ -234,4 +246,3 @@ export default function ProjectModal({ project, onClose }) {
     </div>
   );
 }
-

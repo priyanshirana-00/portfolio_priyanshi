@@ -16,7 +16,7 @@ export default function ProjectsSection() {
           </span>
           <div className="h-[1px] flex-1 bg-[#DDD8CB]" />
           <span className="text-[11px] font-mono text-[#8C8980]">
-            2 FEATURED SYSTEMS
+            3 FEATURED SYSTEMS
           </span>
         </div>
 
@@ -28,7 +28,7 @@ export default function ProjectsSection() {
               <span className="italic">from MERN systems to AI endpoints.</span>
             </h3>
             <p className="font-sans text-sm sm:text-base text-[#5C5A53] leading-relaxed">
-              Two substantial builds, each with its own architecture story. Hover or tap to reveal the work, then open the full case study.
+              Three substantial builds, each with its own architecture story. Hover or tap to reveal the work, then open the full case study.
             </p>
           </div>
 
@@ -44,19 +44,14 @@ export default function ProjectsSection() {
 
         {/* Asymmetric Composition Inspired by Reference */}
         <div className="space-y-16">
-          <div className="border-b border-[#DDD8CB] pb-16">
-            <ProjectCard
-              project={selectedProjects[0]}
-              onOpenDetails={(proj) => setActiveProject(proj)}
-            />
-          </div>
-
-          <div className="border-b border-[#DDD8CB] pb-16">
-            <ProjectCard
-              project={selectedProjects[1]}
-              onOpenDetails={(proj) => setActiveProject(proj)}
-            />
-          </div>
+          {selectedProjects.slice(0, 3).map((project) => (
+            <div key={project.id} className="border-b border-[#DDD8CB] pb-16">
+              <ProjectCard
+                project={project}
+                onOpenDetails={(proj) => setActiveProject(proj)}
+              />
+            </div>
+          ))}
         </div>
       </div>
 
@@ -70,4 +65,3 @@ export default function ProjectsSection() {
     </section>
   );
 }
-

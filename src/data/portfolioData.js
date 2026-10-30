@@ -192,6 +192,40 @@ export const currentlyLearningSkills = [
 
 export const selectedProjects = [
   {
+    id: "ai-buddy",
+    number: "00",
+    title: "AI Buddy – Speech-to-Speech AI Assistant",
+    subtitle: "Voice-First Conversational AI",
+    category: "AI Integration & Voice Interface",
+    year: "2026",
+    alt: "AI Buddy - Speech-to-speech AI assistant with Gemini-powered voice interaction",
+    shortDescription: "An AI-powered voice assistant that captures spoken input, generates responses with Google's Gemini API, and converts those responses into audio.",
+    howItWorks: "The React frontend uses the Web Speech API to capture spoken input, sends it to a FastAPI backend, and uses Google's Gemini API to generate and speak the assistant response with the Kore voice.",
+    whatIBuilt: [
+      "Built a speech-driven assistant with browser speech recognition and voice output for a natural conversational flow.",
+      "Connected a React frontend to a FastAPI backend that orchestrates Gemini-powered response generation and Gemini text-to-speech.",
+      "Integrated Google OAuth and REST APIs to support the end-to-end voice assistant experience."
+    ],
+    problemSolved: "AI Buddy makes conversational AI more accessible by letting users interact through speech instead of relying only on typed prompts, connecting browser audio input to a Gemini-powered backend and spoken responses.",
+    keyLearnings: "Strengthened my understanding of speech interfaces, FastAPI service integration, Gemini API workflows, text-to-speech delivery, and OAuth-enabled full-stack architecture.",
+    technologies: [
+      "React.js",
+      "Python",
+      "FastAPI",
+      "Google Gemini API",
+      "Web Speech API",
+      "Gemini Text-to-Speech",
+      "Google OAuth",
+      "REST APIs"
+    ],
+    links: {
+      github: null,
+      demo: "https://ai-buddy-frontend-orcin.vercel.app/",
+      backend: "https://ai-buddy-backend-a2vn.onrender.com/"
+    },
+    visualType: "chatbot"
+  },
+  {
     id: "eventify",
     number: "01",
     title: "Eventify",
@@ -341,7 +375,8 @@ export const skillCategories = [
       "Pandas (Data Wrangling)",
       "Machine Learning fundamentals",
       "AI Integration",
-      "FastAPI"
+      "FastAPI",
+      "Google Gemini API"
     ]
   },
   {
@@ -356,4 +391,3 @@ export const skillCategories = [
     ]
   }
 ];
-
